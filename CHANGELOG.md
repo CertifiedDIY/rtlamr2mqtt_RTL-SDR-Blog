@@ -1,3 +1,7 @@
+### 2024-03-25
+
+- Replace RTL-SDR driver instalation with RTL-SDR Blog drivers
+
 ### 2022-05-17
 
 - Bug fixes for remote rtl_tcp and usb_reset logic #123

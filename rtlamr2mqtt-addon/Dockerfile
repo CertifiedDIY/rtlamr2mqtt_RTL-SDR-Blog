@@ -5,12 +5,14 @@ WORKDIR /go/src/app
 RUN go install github.com/bemasher/rtlamr@latest \
     && apt-get update \
     && apt-get install -y libusb-1.0-0-dev build-essential git cmake \
-    && git clone https://git.osmocom.org/rtl-sdr.git \
-    && cd rtl-sdr \
+    && git clone https://github.com/rtlsdrblog/rtl-sdr-blog \
+    && cd rtl-sdr-blog \
     && mkdir build && cd build \
-    && cmake .. -DDETACH_KERNEL_DRIVER=ON -DENABLE_ZEROCOPY=ON -Wno-dev \
+    && cmake ../ -DINSTALL_UDEV_RULES=ON \
     && make \
-    && make install
+    && make install \
+    && cp ../rtl-sdr.rules /etc/udev/rules.d/ \
+    && ldconfig
 
 FROM python:3.10-slim
 

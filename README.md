@@ -6,7 +6,7 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/allangood/rtlamr2mqtt)
 [![GitHub issues](https://img.shields.io/github/issues/allangood/rtlamr2mqtt)](https://github.com/allangood/rtlamr2mqtt/issues)
 
-[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fallangood%2Frtlamr2mqtt)
+[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FCertifiedDIY%2Frtlamr2mqtt_RTL-SDR-Blog)
 
 ### Platforms:
 
@@ -19,6 +19,8 @@
 RTLAMR2MQTT is a small Python program to read your utility meter such as water, gas and energy using an inexpensive USB RTL-SDR device and send these readings to a MQTT broker to be integrated with Home Assistant or NodeRed.
 
 The project is currently under heavy development!
+
+**Note:** This fork impliments the drivers for the RTL-SDR Blog V3/V4 USB dongles!
 
 ### Current features
 
@@ -38,6 +40,10 @@ The project is currently under heavy development!
 - Better "LISTEN_ONLY" mode (release 2.2.0)
 
 ### Noteworthy Updates
+
+### 2024-03-25
+
+- Replace RTL-SDR driver instalation with RTL-SDR Blog drivers
 
 ### 2022-05-17
 
