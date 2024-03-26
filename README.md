@@ -75,8 +75,8 @@ The project is currently under heavy development!
 **1) You need a smart meter**
 First and most important, you must have a "smart" water/gas/energy meter. You can find a list of compatible meters [here](https://github.com/bemasher/rtlamr/blob/master/meters.csv)
 
-**2) You need an USB RTL-SDR device**
-I am using this one: [NooElec NESDR Mini USB](https://www.amazon.ca/NooElec-NESDR-Mini-Compatible-Packages/dp/B009U7WZCA/ref=sr_1_1_sspa?crid=JGS4RV7RXGQQ&keywords=rtl-sdr)
+**2) You need a RTL-SDR Blog USB device**
+I am using this one: [RTL-SDR Blog V3/V4](https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/)
 
 **3) You need a MQTT broker** (Like [Mosquitto](https://mosquitto.org/) )
 
@@ -92,16 +92,16 @@ I am using this one: [NooElec NESDR Mini USB](https://www.amazon.ca/NooElec-NESD
 
 #### Home Assistant Add-On:
 
-[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fallangood%2Frtlamr2mqtt)
+[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FCertifiedDIY%2Frtlamr2mqtt_RTL-SDR-Blog)
 
-[![Open your Home Assistant instance and show the dashboard of a Supervisor add-on.](https://my.home-assistant.io/badges/supervisor_addon.svg)](https://my.home-assistant.io/redirect/supervisor_addon/?repository_url=https%3A%2F%2Fgithub.com%2Fallangood%2Frtlamr2mqtt&addon=6713e36e_rtlamr2mqtt)
+[![Open your Home Assistant instance and show the dashboard of a Supervisor add-on.](https://my.home-assistant.io/badges/supervisor_addon.svg)](https://my.home-assistant.io/redirect/supervisor_addon/?repository_url=https%3A%2F%2Fgithub.com%2FCertifiedDIY%2Frtlamr2mqtt_RTL-SDR-Blog&addon=6713e36e_rtlamr2mqtt)
 
 Manually:
 
 - Navigate to your Add-Ons (Configuration > Add-ons, Backups, & Supervisor)
 - Click the Add-On Store button
 - Navigate to Repositories (3 dots in the top-right corner > Repositories)
-- Add this repository (https://github.com/allangood/rtlamr2mqtt) and click 'Add'
+- Add this repository (https://github.com/CertifiedDIY/rtlamr2mqtt_RTL-SDR-Blog) and click 'Add'
 - You should now see the 'rtlamr' Add-On at the bottom of your Add-On Store. Click to install and configure.
 
 #### Docker or Docker-Compose
@@ -166,7 +166,7 @@ mqtt:
 # ***DO NOT ADD -msgtype, -filterid nor -protocol parameters here***
 # -d parameter is not necessary anymore if you use device_id
 custom_parameters:
-  # Documentation for rtl_tcp: https://osmocom.org/projects/rtl-sdr/wiki/Rtl-sdr
+  # Documentation for rtl_tcp: https://github.com/rtlsdrblog/rtl-sdr-blog
   rtltcp: "-s 2048000"
   # Documentation for rtlamr: https://github.com/bemasher/rtlamr/wiki/Configuration
   # If you want to disable the local rtl_tcp and use an external/remote one, you must add "-server=remote-ip-address:port" to the rtlamr section below.
