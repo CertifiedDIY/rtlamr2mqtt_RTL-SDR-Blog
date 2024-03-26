@@ -43,7 +43,7 @@ options:
       name: gas_meter
       format: "####.###"
       unit_of_measurement: m³
-      icon: mdi:gas_canister
+      icon: mdi:meter-gas
       device_class: gas
 schema:
   general:
